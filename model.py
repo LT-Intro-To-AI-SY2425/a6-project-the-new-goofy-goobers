@@ -10,9 +10,8 @@ data = pd.read_csv("data.csv")
 
 
 "RAHHHHHHHHHH"
-# x = data[["x1", "x2", "x3"]].values    PLACEHOLDER REPLACE WITH ACTUAL DATA HEADERS
-# y = data["y"].values                   SAME HERE
-
+# x=data[["x1","x2","x3"]].values    PLACEHOLDER REPLACE WITH ACTUAL DATA HEADERS
+# y=data["y"].values                 SAME HERE
 
 
 xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=.2)
