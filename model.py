@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 "make da model"
 data = pd.read_csv("data.csv")
 "RAHHHHHHHHHH"
-x=data[["Displaced","Debtor","Gender","Scholarship holder"]].values
+x=data[["Displaced","Debtor","Scholarship holder","Gender"]].values
 y_raw=data["Target"].values
 y=[]
 for status in y_raw:
@@ -19,7 +19,7 @@ for status in y_raw:
     elif status == "Graduate":
         y.append(1)
 xtrain,xtest,ytrain,ytest=train_test_split(x,y,test_size=.2)
-xtrain=xtrain.reshape(-1,1)
+# xtrain=xtrain.reshape(-1,1)
 model=LinearRegression().fit(xtrain,ytrain)
 coef=np.around(model.coef_,2)
 intercept=round(float(model.intercept_),2)
